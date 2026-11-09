@@ -1,10 +1,11 @@
 name: Experimental
 
-on:
-  schedule:
-    - cron: '0 6 * * 1'
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: '0 6 * * 1'
+#   workflow_dispatch:
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
